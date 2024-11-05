@@ -31,11 +31,35 @@ const metadata = {
     ]}
     image={{ src: '~/assets/images/plane-img.png', alt: 'Erasmus Image' }}
   >
-    <Fragment slot="title">
-      School of the<span class="hidden xl:inline"></span>
-      <span class="text-accent dark:text-white highlight"> future</span>
-    </Fragment>
+  <Fragment slot="title" class="">
+    <span style="color: #000000;">School of the</span><span class="hidden xl:inline"></span>
+    <span class="text-gradient-animation"> <strong>future</strong></span>
+</Fragment>
 
+
+<style>
+
+.text-gradient-animation strong {
+    background: linear-gradient(45deg, #ff6ec4, #7873f5, #42d392, #f4e07d, #f79d84);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+</style>
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
         <span class="font-semibold">The shcool of the future </span> is an educational institution focused on fostering a more intuitive approach to learning. It integrates innovative teaching methods and technology to create personalized learning experiences, empowering students to engage deeply with content and develop critical thinking skills. This approach encourages adaptability, creativity, and collaboration, equipping students with the essential tools to thrive in an ever-evolving world.
