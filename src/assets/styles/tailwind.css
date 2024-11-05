@@ -4,20 +4,24 @@
 
 @layer utilities {
   .bg-page {
-    background-color: var(--aw-color-bg-page);
+    background-color: var(--aw-color-bg-page-clear);
   }
   .bg-dark {
-    background-color: var(--aw-color-bg-page-dark);
+    background-color: var(--aw-color-bg-page);
   }
   .bg-light {
     background-color: var(--aw-color-bg-page);
   }
   .text-page {
-    color: var(--aw-color-text-page);
+    color: var(--aw-color-text-page-dark);
   }
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+}
+
+* {
+  color: black;
 }
 
 @layer components {
@@ -42,14 +46,6 @@
   @apply bg-page md:bg-white/90 md:backdrop-blur-md;
   box-shadow: 0 0.375rem 1.5rem 0 rgb(140 152 164 / 13%);
 }
-.dark #header.scroll > div:first-child,
-#header.scroll.dark > div:first-child {
-  @apply bg-page md:bg-[#030621e6] border-b border-gray-500/20;
-  box-shadow: none;
-}
-/* #header.scroll > div:last-child {
-  @apply py-3;
-} */
 
 #header.expanded nav {
   position: fixed;
