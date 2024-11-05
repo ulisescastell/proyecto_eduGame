@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+div.text-muted.text-sm.bg-black {
+  display: none;
+}
+
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page-clear);
