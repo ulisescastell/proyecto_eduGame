@@ -13,7 +13,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'Schofu - Learn Easy & Simple',
   ignoreTitleTemplate: true,
 };
 ---
@@ -61,10 +61,7 @@ const metadata = {
 
 </style>
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">The shcool of the future </span> is an educational institution focused on fostering a more intuitive approach to learning. It integrates innovative teaching methods and technology to create personalized learning experiences, empowering students to engage deeply with content and develop critical thinking skills. This approach encourages adaptability, creativity, and collaboration, equipping students with the essential tools to thrive in an ever-evolving world.
-        </span
-      >
+        <span><strong>The shcool of the future</strong> is an educational institution focused on fostering a more intuitive approach to learning. It integrates innovative teaching methods and technology to create personalized learning experiences, empowering students to engage deeply with content and develop critical thinking skills. This approach encourages adaptability, creativity, and collaboration, equipping students with the essential tools to thrive in an ever-evolving world.</span>
     </Fragment>
   </Hero>
 
@@ -75,162 +72,158 @@ const metadata = {
   <!-- Features Widget *************** -->
 
   <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
+  id="features"
+  tagline='features'
+  title="What You Get with School of the Future"
+  subtitle="Revolutionizing Education Through Innovation and Collaboration"
+  items={[
+    {
+      title: 'Personalized Learning Paths',
+      description:
+        'Courses tailored to each student’s unique learning style, pace, and career goals, ensuring maximum growth and success.',
+      icon: 'tabler:brand-tailwind',
+    },
+    {
+      title: 'State-of-the-Art Technology',
+      description:
+        'Integrating cutting-edge tools to enhance learning, including VR simulations, AI-driven analytics, and interactive platforms.',
+      icon: 'tabler:components',
+    },
+    {
+      title: 'Collaborative Learning Environment',
+      description:
+        'Promoting teamwork and communication through group projects, global classrooms, and peer-to-peer mentoring.',
+      icon: 'tabler:list-check',
+    },
+    {
+      title: 'Global Network of Educators',
+      description:
+        'Access to a diverse team of world-class educators and mentors dedicated to student success.',
+      icon: 'tabler:rocket',
+    },
+    {
+      title: 'Holistic Development Programs',
+      description:
+        'Focusing on emotional intelligence, creativity, and adaptability alongside academic excellence.',
+      icon: 'tabler:arrows-right-left',
+    },
+    {
+      title: 'Career Guidance and Support',
+      description:
+        'Providing students with tools for success, including resume workshops, career counseling, and internship opportunities.',
+      icon: 'tabler:bulb',
+    },
+  ]}
+/>
 
-  <!-- Content Widget **************** -->
+<!-- Content Widget: Schofu's Mission -->
+<Content
+  isReversed
+  tagline="Our Mission"
+  title="Empowering Students to Lead in a Dynamic World"
+  items={[
+    {
+      title: 'Innovative Curriculum',
+      description:
+        'Designed to keep pace with the rapidly evolving demands of the 21st century workforce.',
+    },
+    {
+      title: 'Focus on Critical Thinking',
+      description:
+        'Encouraging students to think creatively and solve problems effectively in real-world scenarios.',
+    },
+    {
+      title: 'Diverse Learning Opportunities',
+      description:
+        'Providing exposure to a broad range of subjects, from coding to the arts, fostering well-rounded growth.',
+    },
+  ]}
+  image={{
+    src: '~/assets/images/students.png',
+    alt: 'Students Learning Together',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      A Vision for the Future of Education
+    </h3>
+    Schofu is committed to reshaping how education works by combining technology, collaboration, and innovation to create lasting impacts on students' lives.
+  </Fragment>
 
-  <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 4.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+<!-- Steps Widget: How Schofu Works -->
+<Steps
+  title="How Schofu Empowers Students"
+  items={[
+    {
+      title: 'Step 1: <span class="font-medium">Enroll</span>',
+      description:
+        'Join Schofu and gain access to a platform tailored for success in learning and personal development.',
+      icon: 'tabler:package',
+    },
+    {
+      title: 'Step 2: <span class="font-medium">Learn</span>',
+      description:
+        'Engage with interactive lessons, expert mentors, and real-world projects to master new skills.',
+      icon: 'tabler:letter-case',
+    },
+    {
+      title: 'Step 3: <span class="font-medium">Collaborate</span>',
+      description:
+        'Work with peers and mentors to deepen understanding and build lasting professional connections.',
+      icon: 'tabler:paint',
+    },
+    {
+      title: 'Step 4: <span class="font-medium">Thrive</span>',
+      description:
+        'Achieve your goals with career support, certifications, and a robust network of professionals.',
+      icon: 'tabler:check',
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=987&q=80',
+    alt: 'Learning Process',
+  }}
+/>
 
-  <!-- Content Widget **************** -->
+<!-- Features2 Widget: Schofu Highlights -->
+<Features2
+  title="Explore Our Programs"
+  subtitle="Designed to Inspire and Equip Students for Success"
+  tagline="Educational Programs"
+  items={[
+    {
+      title: 'Digital Skills Academy',
+      description: 'Master coding, web development, and data analytics for the digital age.',
+      icon: 'flat-color-icons:template',
+    },
+    {
+      title: 'Creative Arts & Design',
+      description: 'Unleash your creativity with courses in graphic design, music, and writing.',
+      icon: 'flat-color-icons:gallery',
+    },
+    {
+      title: 'Leadership & Entrepreneurship',
+      description: 'Learn how to lead, innovate, and build impactful businesses.',
+      icon: 'flat-color-icons:approval',
+    },
+    {
+      title: 'Health & Well-being',
+      description:
+        'Programs focused on mental health, physical wellness, and life balance.',
+      icon: 'flat-color-icons:document',
+    },
+  ]}
+>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Features2>
 
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
 
   <!-- Steps Widget ****************** -->
 

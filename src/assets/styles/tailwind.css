@@ -2,27 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+
 div.text-muted.text-sm.bg-black {
   display: none;
 }
 
+
 @layer utilities {
   .bg-page {
-    background-color: var(--aw-color-bg-page-clear);
+    background-color: #ffffff; 
   }
   .bg-dark {
-    background-color: var(--aw-color-bg-page);
+    background-color: #ffffff; 
   }
   .bg-light {
-    background-color: var(--aw-color-bg-page);
+    background-color: #ffffff;
   }
   .text-page {
-    color: var(--aw-color-text-page-dark);
+    color: #000000; 
   }
   .text-muted {
-    color: var(--aw-color-text-muted);
+    color: #808080; 
   }
 }
+
 
 * {
   color: black;
