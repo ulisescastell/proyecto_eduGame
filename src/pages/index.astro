@@ -73,7 +73,6 @@ const metadata = {
 
   <Features
   id="features"
-  tagline='features'
   title="What You Get with School of the Future"
   subtitle="Revolutionizing Education Through Innovation and Collaboration"
   items={[
@@ -119,7 +118,6 @@ const metadata = {
 <!-- Content Widget: Schofu's Mission -->
 <Content
   isReversed
-  tagline="Our Mission"
   title="Empowering Students to Lead in a Dynamic World"
   items={[
     {
@@ -190,236 +188,123 @@ const metadata = {
   }}
 />
 
-<!-- Features2 Widget: Schofu Highlights -->
-<Features2
-  title="Explore Our Programs"
-  subtitle="Designed to Inspire and Equip Students for Success"
-  tagline="Educational Programs"
-  items={[
-    {
-      title: 'Digital Skills Academy',
-      description: 'Master coding, web development, and data analytics for the digital age.',
-      icon: 'flat-color-icons:template',
-    },
-    {
-      title: 'Creative Arts & Design',
-      description: 'Unleash your creativity with courses in graphic design, music, and writing.',
-      icon: 'flat-color-icons:gallery',
-    },
-    {
-      title: 'Leadership & Entrepreneurship',
-      description: 'Learn how to lead, innovate, and build impactful businesses.',
-      icon: 'flat-color-icons:approval',
-    },
-    {
-      title: 'Health & Well-being',
-      description:
-        'Programs focused on mental health, physical wellness, and life balance.',
-      icon: 'flat-color-icons:document',
-    },
-  ]}
->
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-</Features2>
-
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="School Content"
-    subtitle="..."
-    tagline="Components"
-    items={[
-      {
-        title: 'I, CAST',
-        description: "Podcast tailored specifically for students' needs!",
-        image: '/assets',
-      },
-      {
-        title: 'Is it good to make your beliefs a part of your identity?',
-        description:
-          "Think about what defines you as a person",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'The Impact of Video Games on Learning',
-        description:
-          'Does playing video games benefit learning?',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Discover Your Path',
-        description:
-          "A Student's Guide to Finding Purpose and Setting Meaningful Goals",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Emotionally Intelligent Student',
-        description:
-          'A Comprehensive Guide to Enhancing Emotional Intelligence',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Healthy Habits Handbook',
-        description: "A Student's Guide to Nurturing Body and Mind",
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'NourishU',
-        description: "A Student's Guide to Healthy Daily Eating",
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Fit for Life',
-        description:
-          "A Student's Guide to Daily Physical Activity",
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Mind Matters',
-        description: "A Student's Guide to Mental Wellness",
-        icon: 'flat-color-icons:database',
-      },
-      {
-        title: 'Emotion Empowerment',
-        description: "A Student's Guide to Understanding and Mastering Feelings",
-        icon: 'flat-color-icons:database',
-      },
-      {
-        title: 'The Dopamine Detox Blueprint',
-        description: "A Student's Guide to Reclaiming Focus and Well-Being",
-        icon: 'flat-color-icons:database',
-      },
-      {
-        title: 'Mastering Multilingualism',
-        description: "A Comprehensive Guide to Improving Foreign Language Skills",
-        icon: 'flat-color-icons:database',
-      }
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  title="School of the Future"
+  subtitle="Empowering Students with Innovative Learning Tools and Ideas"
+  items={[
+    {
+      title: 'AI-Powered Learning',
+      description: "Discover how artificial intelligence can personalize your learning experience.",
+      //icon: 'flat-color-icons:artificial-intelligence',
+    },
+    {
+      title: 'Virtual Classrooms',
+      description: "Attend interactive lessons from anywhere in the world.",
+      // icon: 'flat-color-icons:virtual-reality',
+    },
+    {
+      title: 'Gamified Education',
+      description: "Learn through engaging games designed to boost retention and enjoyment.",
+      // icon: 'flat-color-icons:gamepad',
+    },
+    {
+      title: 'Sustainable Schools',
+      description: "Explore how future schools are designed to be eco-friendly and energy-efficient.",
+      // icon: 'flat-color-icons:eco',
+    },
+    {
+      title: 'Digital Well-Being',
+      description: "Balance screen time with mental and physical health for a holistic education.",
+      // icon: 'flat-color-icons:wellness',
+    },
+    {
+      title: 'Augmented Reality Labs',
+      description: "Experience science and history like never before with AR-enhanced lessons.",
+      // icon: 'flat-color-icons:augmented-reality',
+    },
+    {
+      title: 'Global Collaboration',
+      description: "Work with students across the globe on projects that make a difference.",
+      // icon: 'flat-color-icons:worldwide',
+    },
+    {
+      title: 'Personalized Career Pathways',
+      description: "Use advanced tools to map out your dream career step by step.",
+      // icon: 'flat-color-icons:career-development',
+    },
+    {
+      title: 'Mindfulness Programs',
+      description: "Stay focused and manage stress with meditation and emotional intelligence training.",
+      // icon: 'flat-color-icons:relax',
+    },
+    {
+      title: 'The Future of Assessment',
+      description: "AI-driven evaluations that adapt to your unique strengths and weaknesses.",
+      // icon: 'flat-color-icons:analytics',
+    },
+  ]}
+/>
 
-  <!-- HighlightedPosts Widget ******* -->
+<!-- FAQs Widget -->
 
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
+<FAQs
+  title="Future Education FAQs"
+  subtitle="Learn more about the groundbreaking ideas behind School of the Future."
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+    {
+      title: 'What is School of the Future?',
+      description:
+        "School of the Future represents a shift towards using technology, sustainability, and inclusivity to redefine education for the next generation.",
+    },
+    {
+      title: 'How will AI change education?',
+      description:
+        "AI can personalize learning paths, automate administrative tasks, and provide real-time feedback, allowing teachers to focus on creativity and innovation.",
+    },
+    {
+      title: 'What role does sustainability play?',
+      description:
+        "Schools of the future aim to reduce their carbon footprint with eco-friendly designs and renewable energy sources, promoting environmental stewardship.",
+    },
+    {
+      title: 'Will physical classrooms become obsolete?',
+      description:
+        "While virtual classrooms are growing, physical spaces will evolve into dynamic hubs for collaboration and hands-on learning experiences.",
+    },
+    {
+      title: 'How can I prepare for future careers?',
+      description:
+        "Focus on developing skills like critical thinking, adaptability, and proficiency in emerging technologies to stay relevant in a fast-changing world.",
+    },
+    {
+      title: 'What technologies are shaping the future of education?',
+      description:
+        "AI, VR/AR, blockchain for credentialing, and IoT are some of the technologies transforming how we teach and learn.",
+    },
+  ]}
+/>
 
-  <!-- FAQs Widget ******************* -->
+<!-- CallToAction Widget -->
 
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
+<CallToAction
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Join the Future',
+      href: 'https://school-of-the-future.com',
+      target: '_blank',
+      icon: 'tabler:rocket',
+    },
+  ]}
+>
+  <Fragment slot="title">
+    Welcome to the&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">School of the Future</span>
+  </Fragment>
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
-</Layout>
+  <Fragment slot="subtitle">
+    Experience a new era in education. <br class="hidden md:inline" />The future of learning starts here.
+  </Fragment>
+</CallToAction>
