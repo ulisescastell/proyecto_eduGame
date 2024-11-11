@@ -59,7 +59,69 @@ const metadata = {
     }
 }
 
+@import "compass/css3";
+
+.letter-grid {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  
+  span {
+    background-color: transparent;
+    color: rgba(0,0,0,.25);
+    display: block;
+    float: left;
+    font-size: 10px;
+    opacity: 0;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: background-color .75s, color .75s, opacity .75s, transform .5s;
+    user-select: none;
+    visibility: hidden;
+    width: 10px;
+    height: 10px;
+      
+    &:hover {
+      background-color: orange;
+      color: white;
+      cursor: default;
+    }
+    
+    &:nth-child(5n+1) {
+      color: orange;
+      font-weight: bold;
+      transform: rotate(45deg);
+    }
+    
+    &:nth-child(10n+1) {
+      transform: rotate(-45deg);
+    }
+    
+    &:nth-child(5n+1){
+      &:hover {
+        color: white;
+      }    
+    }
+  }
+}
+
+.js-show-letters span{
+  opacity: 1;
+  visibility: visible;
+}
+
+
 </style>
+
+
+
+<body  style="background-color: #f0f4ff;">
+
     <Fragment slot="subtitle">
         <span><strong>The shcool of the future</strong> is an educational institution focused on fostering a more intuitive approach to learning. It integrates innovative teaching methods and technology to create personalized learning experiences, empowering students to engage deeply with content and develop critical thinking skills. This approach encourages adaptability, creativity, and collaboration, equipping students with the essential tools to thrive in an ever-evolving world.</span>
     </Fragment>
@@ -200,16 +262,6 @@ const metadata = {
       //icon: 'flat-color-icons:artificial-intelligence',
     },
     {
-      title: 'Virtual Classrooms',
-      description: "Attend interactive lessons from anywhere in the world.",
-      // icon: 'flat-color-icons:virtual-reality',
-    },
-    {
-      title: 'Gamified Education',
-      description: "Learn through engaging games designed to boost retention and enjoyment.",
-      // icon: 'flat-color-icons:gamepad',
-    },
-    {
       title: 'Sustainable Schools',
       description: "Explore how future schools are designed to be eco-friendly and energy-efficient.",
       // icon: 'flat-color-icons:eco',
@@ -234,16 +286,8 @@ const metadata = {
       description: "Use advanced tools to map out your dream career step by step.",
       // icon: 'flat-color-icons:career-development',
     },
-    {
-      title: 'Mindfulness Programs',
-      description: "Stay focused and manage stress with meditation and emotional intelligence training.",
-      // icon: 'flat-color-icons:relax',
-    },
-    {
-      title: 'The Future of Assessment',
-      description: "AI-driven evaluations that adapt to your unique strengths and weaknesses.",
-      // icon: 'flat-color-icons:analytics',
-    },
+
+
   ]}
 />
 
@@ -300,6 +344,8 @@ const metadata = {
     },
   ]}
 >
+
+</body>
   <Fragment slot="title">
     Welcome to the&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">School of the Future</span>
   </Fragment>
