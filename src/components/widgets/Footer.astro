@@ -23,82 +23,40 @@ export interface Props {
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
 ---
 
-<footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
-  <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div
-    class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300 intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
-  >
-    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
-      <div class="col-span-12 lg:col-span-4">
-        <div class="mb-2">
-          <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
-        </div>
-        <div class="text-sm text-muted flex gap-1">
-          {
-            secondaryLinks.map(({ text, href }, index) => (
-              <>
-                {index !== 0 ? ' · ' : ''}
-                <a
-                  class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-                  href={href}
-                  set:html={text}
-                />
-              </>
-            ))
-          }
-        </div>
+<footer class="bg-gray-100 border-t border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-400 py-4">
+  <div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+    
+    <!-- Logo y Links Secundarios -->
+    <div class="text-center md:text-left">
+      <a href="/" class="text-lg font-semibold text-gray-300 dark:text-gray-800 hover:underline">School of the Future</a>
+      <div class="text-sm mt-1 space-x-2">
+        <a href="/about" class="hover:underline">About Us</a> ·
+        <a href="/contact" class="hover:underline">Contact</a> ·
+        <a href="/privacy" class="hover:underline">Privacy Policy</a>
+        <a href="https://ulisescastell.com" class="hover:underline">developed by ulicastell & ayman</a>
       </div>
-      {
-        links.map(({ title, links }) => (
-          <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
-            {links && Array.isArray(links) && links.length > 0 && (
-              <ul class="text-sm">
-                {links.map(({ text, href, ariaLabel }) => (
-                  <li class="mb-2">
-                    <a
-                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-                      href={href}
-                      aria-label={ariaLabel}
-                    >
-                      <Fragment set:html={text} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ))
-      }
     </div>
-    <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-      {
-        socialLinks?.length ? (
-          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
-            {socialLinks.map(({ ariaLabel, href, text, icon }) => (
-              <li>
-                <a
-                  class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                  aria-label={ariaLabel}
-                  href={href}
-                >
-                  {icon && <Icon name={icon} class="w-5 h-5" />}
-                  <Fragment set:html={text} />
-                </a>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          ''
-        )
-      }
 
-      <div class="text-sm mr-4 dark:text-muted">
-        <Fragment set:html={footNote} />
-      </div>
+    <!-- Links de Navegación -->
+    <div class="flex flex-wrap justify-center md:justify-start space-x-4">
+      <a href="/courses" class="text-sm hover:underline">Courses</a>
+      <a href="/blog" class="text-sm hover:underline">Blog</a>
+      <a href="/events" class="text-sm hover:underline">Events</a>
+      <a href="/resources" class="text-sm hover:underline">Resources</a>
     </div>
-  </div>
-</footer>
+
+    <!-- Redes Sociales -->
+    <div class="flex space-x-4">
+      <a href="https://facebook.com" aria-label="Facebook" class="text-gray-600 dark:text-gray-400 hover:text-blue-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.594 0 0 .594 0 1.325v21.351C0 23.406.594 24 1.325 24h11.495v-9.294H9.691v-3.62h3.129v-2.672c0-3.1 1.893-4.785 4.658-4.785 1.325 0 2.464.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.763v2.31h3.587l-.467 3.62h-3.12V24h6.116c.731 0 1.325-.594 1.325-1.325V1.325C24 .594 23.406 0 22.675 0z"/></svg>
+      </a>
+      <a href="https://twitter.com" aria-label="Twitter" class="text-gray-600 dark:text-gray-400 hover:text-blue-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557a9.831 9.831 0 01-2.828.775 4.933 4.933 0 002.165-2.724 9.865 9.865 0 01-3.127 1.195 4.918 4.918 0 00-8.379 4.482c-4.084-.205-7.699-2.158-10.125-5.13a4.822 4.822 0 00-.666 2.475 4.92 4.92 0 002.188 4.1A4.904 4.904 0 01.964 9.27v.063a4.921 4.921 0 003.946 4.827 4.902 4.902 0 01-2.212.085 4.93 4.93 0 004.6 3.417 9.868 9.868 0 01-6.102 2.104c-.395 0-.787-.023-1.175-.069a13.94 13.94 0 007.548 2.212c9.054 0 14.002-7.503 14.002-14.002 0-.213-.005-.426-.014-.637A10.01 10.01 0 0024 4.557z"/></svg>
+      </a>
+      <a href="https://instagram.com" aria-label="Instagram" class="text-gray-600 dark:text-gray-400 hover:text-pink-500">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.055 2.042.24 2.513.511.594.342 1.025.8 1.453 1.453.27.47.456 1.307.511 2.513.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.055 1.206-.24 2.042-.511 2.513a4.358 4.358 0 01-1.453 1.453c-.47.27-1.307.456-2.513.511-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.206-.055-2.042-.24-2.513-.511a4.358 4.358 0 01-1.453-1.453c-.27-.47-.456-1.307-.511-2.513-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.055-1.206.24-2.042.511-2.513a4.358 4.358 0 011.453-1.453c.47-.27 1.307-.456 2.513-.511 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.012-4.947.07-1.285.058-2.178.244-2.959.513-.857.288-1.573.677-2.289 1.393-.716.716-1.105 1.432-1.393 2.289-.269.781-.455 1.674-.513 2.959-.058 1.281-.07 1.688-.07 4.947s.012 3.667.07 4.947c.058 1.285.244 2.178.513 2.959.288.857.677 1.573 1.393 2.289.716.716 1.432 1.105 2.289 1.393.781.269 1.674.455 2.959.513 1.281.058 1.688.07 4.947.07s3.667-.012 4.947-.07c1.285-.058 2.178-.244 2.959-.513.857-.288 1.573-.677 2.289-1.393.716-.716 1.105-1.432 1.393-2.289.269-.781.455-1.674.513-2.959.058-1.281.07-1.688.07-4.947s-.012-3.667-.07-4.947c-.058-1.285-.244-2.178-.513-2.959-.288-.857-.677-1.573-1.393-2.289-.716-.716-1.432-1.105-2.289-1.393-.781-.269-1.674-.455-2.959-.513-1.281-.058-1.688-.07-4.947-.07zm0 5.838a6.162 6.162 0 110 12.324 6.162 6.162 0 010-12.324zm0 10.162a4 4 0 100-8 4 4 0 000 8zm6.406-11.845a1.44 1.44 0 11-2.881 0 1.44 1.44 0 012.881 0z"/></svg>
+      </a>
+    </div>
+
